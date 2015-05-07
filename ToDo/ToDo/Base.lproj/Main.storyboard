@@ -58,6 +58,9 @@
                                                 <exclude reference="cBj-xV-z6F"/>
                                             </mask>
                                         </variation>
+                                        <connections>
+                                            <outlet property="delegate" destination="vt4-lY-Lno" id="hAG-Nf-LUG"/>
+                                        </connections>
                                     </textField>
                                     <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" animating="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="tvW-qm-1qO">
                                         <rect key="frame" x="253" y="77" width="20" height="20"/>
@@ -78,7 +81,7 @@
                                     <constraint firstItem="D11-Bc-zoM" firstAttribute="top" secondItem="2mZ-l1-GYL" secondAttribute="top" constant="36" id="lBv-86-W40"/>
                                     <constraint firstAttribute="centerX" secondItem="D11-Bc-zoM" secondAttribute="centerX" id="lwz-Ux-31N"/>
                                     <constraint firstAttribute="width" constant="290" id="nB0-zS-9Tj"/>
-                                    <constraint firstItem="PQf-xE-Aem" firstAttribute="centerX" secondItem="D11-Bc-zoM" secondAttribute="centerX" constant="-0.5" id="uGA-Ad-SQK"/>
+                                    <constraint firstItem="PQf-xE-Aem" firstAttribute="centerX" secondItem="D11-Bc-zoM" secondAttribute="centerX" id="uGA-Ad-SQK"/>
                                 </constraints>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
