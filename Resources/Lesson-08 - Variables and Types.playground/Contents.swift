@@ -3,8 +3,6 @@
 println("Welcome to the Playground!")
 
 
-
-
 //////////////////////
 ///   VARIABLES    ///
 //////////////////////
@@ -40,9 +38,10 @@ x = 5
 y // Y is 10 as `y = x` means "Take the value that x is and assign that vale to y". It doesn't bind y to x's value
 
 
+
 //--- Type Casting ---//
 
-//let age = Int("16") This doesn't work as Swift can't reliably convert any string to a integer
+//let age = Int("16") //This doesn't work as Swift can't reliably convert any string to a integer
 let ageString = String(33) // This is fine as an Integer knows how to convert itself to a string
 
 
@@ -66,7 +65,6 @@ var myFloat:Float = 3.14159265358979323846264 // Only prcise to 5 decimal points
 var photos = ["dog", "emu", "zebra", "cat", "fish"]
 var weatherTemperatures = [15, 21, 18, 11, 10]
 
-
 // Accessing elements
 photos.first
 photos[0] // Array indexes start from 0
@@ -81,7 +79,6 @@ let elementToRemove = photos.removeAtIndex(0) // Remove an element at a specific
 
 // Sorting
 photos.reverse() // Note that this doesn't change the array, it returns a reversed version of it
-photos
 photos.sort { $0 < $1 }
 photos // Sort DOES change the array
 
@@ -94,8 +91,13 @@ photos // Sort DOES change the array
 // Arrays are great for a linear list of things.
 // Dictionaries are great for a list of things identifiable by a name/label
 
+let softDrinks = [
+  "fanta": "orange",
+  "coke": "black",
+  "dr pepper": "purple"
+]
 
-
+let softDrinks2 = [String:String]()
 
 // More info on Dictionaries - https://goo.gl/tLQAZG
 
@@ -103,8 +105,8 @@ photos // Sort DOES change the array
 
 /// Structs - for "structured" data ///
 struct ScreenResolution {
-  let width:Int
-  let height:Int
+  var width:Int
+  var height:Int
   
   func pixels() {
     width * height
@@ -112,12 +114,14 @@ struct ScreenResolution {
   
   // These methods are equivalent, this one just explicitly states the
   // return type and includes the return statement
-  func pixelsExplicit() -> Int {
-    return width * height
+  func pixelsExplicit(multiplier:Int) -> Int {
+    return multiplier * (width * height)
   }
 }
-ScreenResolution(width: 640, height: 480).pixels()
-ScreenResolution(width: 640, height: 480).pixelsExplicit()
+let screenRes1 = ScreenResolution(width: 640, height: 480)
+screenRes1.pixels()
+let screenRes2 = ScreenResolution(width: 640, height: 480)
+screenRes2.pixelsExplicit(2)
 
 //----------------------------------
 
@@ -141,7 +145,7 @@ if jamesBondClearance1 == highlyClassified {
 
 // Enums allow us to wrap this up into a single type.
 
-enum SecurityClearanceLevel {
+enum SecurityClearanceLevel:Int {
   case HighlyClassified // We don't care about the value, we just need a way to match on the chosen type later
   case Classified
   case Restricted
@@ -149,6 +153,7 @@ enum SecurityClearanceLevel {
 }
 
 var jamesBondClearance = SecurityClearanceLevel.HighlyClassified
+jamesBondClearance.rawValue
 
 // This enables our code to check against a defined type
 if jamesBondClearance == .HighlyClassified {
@@ -176,9 +181,10 @@ if bond.clerance == .HighlyClassified {
 /// Tuples ///
 // Easily group related values to together
 
-let screenCoordinate = (x:400, y:620)
+let screenCoordinate = (x:400, y:620, z:"hello")
 screenCoordinate.x
 screenCoordinate.y
+screenCoordinate.z
 
 // I would avoid this syntax, it's so easy to attach labels and it's much more explicit what value you're getting
 let boxSize = (640, 480)
