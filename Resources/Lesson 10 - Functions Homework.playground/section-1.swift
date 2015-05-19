@@ -1,4 +1,7 @@
-// Swift function exercises.
+////////////////////////////////////////
+//   Lesson 09 - Functions Homework   //
+////////////////////////////////////////
+
 
 // Complete these, in order, writing code under each TODO statement. Each statement calls for a function to be written, write each of them and then immediately call it after the function definition.
 
