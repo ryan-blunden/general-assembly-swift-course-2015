@@ -1,0 +1,1 @@
+Paw from http://commons.wikimedia.org/wiki/File:Black_Paw.svg

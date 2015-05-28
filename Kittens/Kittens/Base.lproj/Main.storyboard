@@ -1,0 +1,344 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="lUb-Qj-Yhd">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <scenes>
+        <!--Listy-->
+        <scene sceneID="vr9-vP-0yH">
+            <objects>
+                <viewController title="Listy" id="zIg-Fu-dmB" customClass="ViewController" customModule="Kittens" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="bft-5x-CA3"/>
+                        <viewControllerLayoutGuide type="bottom" id="U7M-1d-xXi"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="lKw-c7-I2j">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="launch" translatesAutoresizingMaskIntoConstraints="NO" id="cyB-CD-cBG">
+                                <rect key="frame" x="16" y="64" width="568" height="536"/>
+                            </imageView>
+                            <visualEffectView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="10N-am-zIX">
+                                <rect key="frame" x="0.0" y="64" width="600" height="536"/>
+                                <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="VnW-fC-gey">
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="536"/>
+                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                    <subviews>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3Ci-35-Hu0">
+                                            <rect key="frame" x="277" y="152" width="30" height="30"/>
+                                            <state key="normal">
+                                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                            </state>
+                                        </button>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="paw" translatesAutoresizingMaskIntoConstraints="NO" id="SCl-36-CQ0">
+                                            <rect key="frame" x="180" y="96" width="240" height="128"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="128" id="9tH-xc-2jx"/>
+                                                <constraint firstAttribute="width" constant="240" id="n4J-8n-8Wc"/>
+                                            </constraints>
+                                        </imageView>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Kittens" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="544-9z-Q8k">
+                                            <rect key="frame" x="254" y="279" width="91" height="36"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZfW-aq-uar" customClass="KTUIBUtton" customModule="Kittens" customModuleProvider="target">
+                                            <rect key="frame" x="228" y="331" width="177" height="45"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="45" id="3Td-YZ-pJc"/>
+                                                <constraint firstAttribute="width" constant="177" id="UjB-9q-Ihw"/>
+                                            </constraints>
+                                            <state key="normal" title="Login">
+                                                <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                            </state>
+                                            <userDefinedRuntimeAttributes>
+                                                <userDefinedRuntimeAttribute type="color" keyPath="bgColor">
+                                                    <color key="value" cocoaTouchSystemColor="tableCellGroupedBackgroundColor"/>
+                                                </userDefinedRuntimeAttribute>
+                                                <userDefinedRuntimeAttribute type="color" keyPath="textColor">
+                                                    <color key="value" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                                </userDefinedRuntimeAttribute>
+                                                <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                                    <color key="value" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                </userDefinedRuntimeAttribute>
+                                                <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                                    <real key="value" value="1"/>
+                                                </userDefinedRuntimeAttribute>
+                                                <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                    <real key="value" value="5"/>
+                                                </userDefinedRuntimeAttribute>
+                                            </userDefinedRuntimeAttributes>
+                                            <connections>
+                                                <segue destination="yJW-nK-7eK" kind="show" id="EU3-1W-PQX"/>
+                                            </connections>
+                                        </button>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstItem="544-9z-Q8k" firstAttribute="top" secondItem="SCl-36-CQ0" secondAttribute="bottom" constant="55" id="2c9-Il-Og4"/>
+                                        <constraint firstItem="SCl-36-CQ0" firstAttribute="top" secondItem="VnW-fC-gey" secondAttribute="top" constant="96" id="3LV-ID-dnd"/>
+                                        <constraint firstAttribute="centerX" secondItem="544-9z-Q8k" secondAttribute="centerX" id="7gt-qg-wKs"/>
+                                        <constraint firstAttribute="centerX" secondItem="SCl-36-CQ0" secondAttribute="centerX" id="9pg-Tg-u3B"/>
+                                        <constraint firstAttribute="centerX" secondItem="ZfW-aq-uar" secondAttribute="centerX" id="UhA-tM-ayJ"/>
+                                        <constraint firstItem="ZfW-aq-uar" firstAttribute="top" secondItem="544-9z-Q8k" secondAttribute="bottom" constant="16" id="diV-jN-9Z3"/>
+                                    </constraints>
+                                </view>
+                                <blurEffect style="light"/>
+                            </visualEffectView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="bottomMargin" secondItem="cyB-CD-cBG" secondAttribute="bottom" id="L4u-Sb-yf1"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="cyB-CD-cBG" secondAttribute="trailing" id="LmT-1w-zmo"/>
+                            <constraint firstItem="10N-am-zIX" firstAttribute="top" secondItem="bft-5x-CA3" secondAttribute="bottom" id="NnD-V5-dOC"/>
+                            <constraint firstItem="cyB-CD-cBG" firstAttribute="leading" secondItem="lKw-c7-I2j" secondAttribute="leadingMargin" id="QAt-8b-Js3"/>
+                            <constraint firstAttribute="trailing" secondItem="10N-am-zIX" secondAttribute="trailing" id="ROl-F8-Zcb"/>
+                            <constraint firstItem="10N-am-zIX" firstAttribute="leading" secondItem="lKw-c7-I2j" secondAttribute="leading" id="Zaj-31-mJq"/>
+                            <constraint firstItem="U7M-1d-xXi" firstAttribute="top" secondItem="10N-am-zIX" secondAttribute="bottom" id="aWF-Jd-iuN"/>
+                            <constraint firstItem="cyB-CD-cBG" firstAttribute="top" secondItem="bft-5x-CA3" secondAttribute="bottom" id="fTY-v0-r0L"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Login" id="ugv-pz-unf">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="Mrk-uw-Jxe"/>
+                    </navigationItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="g3T-Ct-iam" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1497" y="528"/>
+        </scene>
+        <!--Kittens Home-->
+        <scene sceneID="KWr-Wd-UVE">
+            <objects>
+                <viewController id="yJW-nK-7eK" customClass="KittensListViewController" customModule="Kittens" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="nI7-73-vz0"/>
+                        <viewControllerLayoutGuide type="bottom" id="uip-8a-ePr"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="W32-oz-Oh4">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Filtering Kittens by: None" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HHb-UI-0iK">
+                                <rect key="frame" x="179" y="110" width="242.5" height="26.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1SS-HE-SgN" userLabel="Cute" customClass="KTDesignableView" customModule="Kittens" customModuleProvider="target">
+                                <rect key="frame" x="140" y="172" width="320" height="144"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="kittens-cute" translatesAutoresizingMaskIntoConstraints="NO" id="htt-V9-pp0">
+                                        <rect key="frame" x="0.0" y="0.0" width="320" height="144"/>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Cute" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JqQ-CK-axA">
+                                        <rect key="frame" x="0.0" y="114" width="320" height="30"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="30" id="Ucb-LE-vLw"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstItem="htt-V9-pp0" firstAttribute="bottom" secondItem="JqQ-CK-axA" secondAttribute="bottom" id="2Kg-Ko-dvL"/>
+                                    <constraint firstAttribute="trailing" secondItem="JqQ-CK-axA" secondAttribute="trailing" id="CZR-fd-Psb"/>
+                                    <constraint firstItem="htt-V9-pp0" firstAttribute="leading" secondItem="1SS-HE-SgN" secondAttribute="leading" id="EEv-fP-P5c"/>
+                                    <constraint firstItem="JqQ-CK-axA" firstAttribute="leading" secondItem="1SS-HE-SgN" secondAttribute="leading" id="EUl-VO-V3g"/>
+                                    <constraint firstAttribute="height" constant="144" id="Vqa-Gl-SeC"/>
+                                    <constraint firstAttribute="bottom" secondItem="htt-V9-pp0" secondAttribute="bottom" id="YwO-I1-33f"/>
+                                    <constraint firstItem="htt-V9-pp0" firstAttribute="top" secondItem="1SS-HE-SgN" secondAttribute="top" id="buQ-NI-gZX"/>
+                                    <constraint firstAttribute="width" constant="320" id="pXM-h2-7G5"/>
+                                    <constraint firstAttribute="trailing" secondItem="htt-V9-pp0" secondAttribute="trailing" id="rEg-Co-tmf"/>
+                                    <constraint firstAttribute="centerX" secondItem="JqQ-CK-axA" secondAttribute="centerX" id="wdJ-Tf-a6n"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                        <color key="value" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                        <real key="value" value="1"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="0.0"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="OQH-xa-ZOn" userLabel="Ragdoll" customClass="KTDesignableView" customModule="Kittens" customModuleProvider="target">
+                                <rect key="frame" x="140" y="352" width="320" height="144"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="kittens-ragdoll" translatesAutoresizingMaskIntoConstraints="NO" id="1Vr-cq-aot">
+                                        <rect key="frame" x="0.0" y="0.0" width="320" height="144"/>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ragdoll" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="X2R-Nd-Evp">
+                                        <rect key="frame" x="0.0" y="114" width="320" height="30"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="30" id="Idl-VP-MPd"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" red="0.91764712329999998" green="0.14509804549999999" blue="0.2470588386" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="144" id="0SQ-Zl-iWe"/>
+                                    <constraint firstItem="1Vr-cq-aot" firstAttribute="leading" secondItem="OQH-xa-ZOn" secondAttribute="leading" id="5Zd-Yk-DFB"/>
+                                    <constraint firstItem="X2R-Nd-Evp" firstAttribute="top" secondItem="1Vr-cq-aot" secondAttribute="bottom" id="5p5-76-agk"/>
+                                    <constraint firstAttribute="trailing" secondItem="1Vr-cq-aot" secondAttribute="trailing" id="6an-U4-Od0"/>
+                                    <constraint firstAttribute="width" constant="320" id="DeS-3D-R3x"/>
+                                    <constraint firstAttribute="bottom" secondItem="X2R-Nd-Evp" secondAttribute="bottom" id="JXZ-kf-3fR"/>
+                                    <constraint firstItem="X2R-Nd-Evp" firstAttribute="leading" secondItem="OQH-xa-ZOn" secondAttribute="leading" id="TaP-AF-5vR"/>
+                                    <constraint firstAttribute="bottom" secondItem="1Vr-cq-aot" secondAttribute="bottom" id="qbO-Zi-7a0"/>
+                                    <constraint firstAttribute="trailing" secondItem="X2R-Nd-Evp" secondAttribute="trailing" id="r2M-ys-btF"/>
+                                    <constraint firstItem="1Vr-cq-aot" firstAttribute="top" secondItem="OQH-xa-ZOn" secondAttribute="top" id="rrm-Gr-mwu"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <real key="value" value="0.0"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                        <real key="value" value="1"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                        <color key="value" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="5p5-76-agk"/>
+                                    </mask>
+                                </variation>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="centerX" secondItem="OQH-xa-ZOn" secondAttribute="centerX" id="0dO-yN-b7t"/>
+                            <constraint firstItem="1SS-HE-SgN" firstAttribute="top" secondItem="HHb-UI-0iK" secondAttribute="bottom" constant="36" id="atR-21-bKa"/>
+                            <constraint firstAttribute="centerX" secondItem="1SS-HE-SgN" secondAttribute="centerX" id="kXb-c5-IBD"/>
+                            <constraint firstItem="HHb-UI-0iK" firstAttribute="top" secondItem="nI7-73-vz0" secondAttribute="bottom" constant="46" id="naB-uy-S6i"/>
+                            <constraint firstAttribute="centerX" secondItem="HHb-UI-0iK" secondAttribute="centerX" id="usN-9w-qku"/>
+                            <constraint firstItem="OQH-xa-ZOn" firstAttribute="top" secondItem="htt-V9-pp0" secondAttribute="bottom" constant="36" id="wHB-1k-Kr7"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Kittens Home" id="cy6-CR-LPx">
+                        <barButtonItem key="rightBarButtonItem" title="Filter Kittens" id="24d-2y-f02">
+                            <connections>
+                                <segue destination="ZzU-TW-gfW" kind="show" id="1BG-V8-JEs"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="600" height="600"/>
+                    <connections>
+                        <outlet property="cuteTextLabel" destination="JqQ-CK-axA" id="nyO-p3-t7U"/>
+                        <outlet property="cuteView" destination="1SS-HE-SgN" id="YiN-gD-Kbq"/>
+                        <outlet property="filterTextLabel" destination="HHb-UI-0iK" id="kZd-EB-weC"/>
+                        <outlet property="ragdollTextLabel" destination="X2R-Nd-Evp" id="cVh-Hy-Hem"/>
+                        <outlet property="ragdollView" destination="OQH-xa-ZOn" id="8Kd-Cn-SGd"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="aFQ-74-Yqm" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2421" y="546"/>
+        </scene>
+        <!--Filter Kittens-->
+        <scene sceneID="fah-7O-2kG">
+            <objects>
+                <viewController id="ZzU-TW-gfW" customClass="KittensFilterViewController" customModule="Kittens" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="aGi-7v-By6"/>
+                        <viewControllerLayoutGuide type="bottom" id="Pmd-KU-bdo"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="gHY-lB-rWd">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Previous Choice: None" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="l0T-Xd-jqT">
+                                <rect key="frame" x="190" y="103" width="220.5" height="26.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hGs-Sp-DrK">
+                                <rect key="frame" x="283" y="168" width="33" height="30"/>
+                                <state key="normal" title="Cute">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="hyM-L4-rJC" kind="unwind" identifier="cuteButton" unwindAction="unwindToKittensListViewController:sender:" id="0eF-42-rEZ"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1By-71-e44">
+                                <rect key="frame" x="273" y="234" width="53" height="30"/>
+                                <state key="normal" title="Ragdoll">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="hyM-L4-rJC" kind="unwind" identifier="ragdollButton" unwindAction="unwindToKittensListViewController:sender:" id="iO0-cz-1lY"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Pws-By-mYY">
+                                <rect key="frame" x="262.5" y="300" width="75" height="30"/>
+                                <state key="normal" title="Clear Filter">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="hyM-L4-rJC" kind="unwind" identifier="clearFilterButton" unwindAction="unwindToKittensListViewController:sender:" id="AVz-Mg-YQh"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="centerX" secondItem="hGs-Sp-DrK" secondAttribute="centerX" id="2Ss-mG-TGi"/>
+                            <constraint firstAttribute="centerX" secondItem="l0T-Xd-jqT" secondAttribute="centerX" id="4xR-g1-TA5"/>
+                            <constraint firstAttribute="centerX" secondItem="1By-71-e44" secondAttribute="centerX" id="78p-2x-me9"/>
+                            <constraint firstItem="Pws-By-mYY" firstAttribute="top" secondItem="1By-71-e44" secondAttribute="bottom" constant="36" id="J9v-U6-mrk"/>
+                            <constraint firstAttribute="centerX" secondItem="Pws-By-mYY" secondAttribute="centerX" id="N53-sy-0ri"/>
+                            <constraint firstItem="l0T-Xd-jqT" firstAttribute="top" secondItem="aGi-7v-By6" secondAttribute="bottom" constant="39" id="dAj-Bm-b4g"/>
+                            <constraint firstItem="1By-71-e44" firstAttribute="top" secondItem="hGs-Sp-DrK" secondAttribute="bottom" constant="36" id="duX-2O-9oU"/>
+                            <constraint firstItem="hGs-Sp-DrK" firstAttribute="top" secondItem="l0T-Xd-jqT" secondAttribute="bottom" constant="38.5" id="ghL-Tu-WjQ"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Filter Kittens" id="Ohm-Uy-vpM"/>
+                    <connections>
+                        <outlet property="previousChoiceTextLabel" destination="l0T-Xd-jqT" id="2UJ-LS-kAV"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="bN9-8B-PBx" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="hyM-L4-rJC" userLabel="Exit" sceneMemberID="exit"/>
+                <navigationItem title="Kittens Home" id="nbv-6X-YqI">
+                    <barButtonItem key="rightBarButtonItem" title="Filter Kittens" id="5fD-Ck-aiJ"/>
+                </navigationItem>
+            </objects>
+            <point key="canvasLocation" x="3126" y="546"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="Wje-Ku-aOw">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="lUb-Qj-Yhd" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="5mq-KC-Hvs">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="zIg-Fu-dmB" kind="relationship" relationship="rootViewController" id="KIj-nf-Upl"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="5Of-Bi-INx" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="685" y="528"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="kittens-cute" width="414" height="186"/>
+        <image name="kittens-ragdoll" width="414" height="186"/>
+        <image name="launch" width="360" height="640"/>
+        <image name="paw" width="284" height="266"/>
+    </resources>
+</document>

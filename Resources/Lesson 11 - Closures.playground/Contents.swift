@@ -7,7 +7,6 @@
 
 // 1. Functions can be assigned to variables and passed in and out of other functions as arguments, just as an Int or a String can be.
 
-// This is a function that takes an Int and prints it.
 func sayHello(name:String) {
   println("Hello \(name)!")
 }
@@ -18,26 +17,42 @@ func sayHello(name:String) {
 let sayhelloFuncRef = sayHello
 
 // Now you can call that function using your variable.
-//sayhelloFuncRef()
+sayhelloFuncRef("Ryan")
+
+sayHello("Ryan")
 
 // You can also write a function that takes a function as an argument
-func useFunction(funcParam: (name:String) -> () ) {
-  funcParam(name:"Ryan")
+func useFunction(funcParam: () -> () ) -> Bool {
+  funcParam()
+  
+  return true
 }
+
+func intReturnBool(age:Int) -> Bool {
+  return true
+}
+
+//{ (Parameters) -> ReturnType in
+
+useFunction({ () -> () in
+  println("hello World")
+})
+
 
 // You can call this new function passing in either
 // the original function:
-useFunction(sayHello)
+//useFunction(sayHello)
+//
+//// or the variable
+//useFunction(sayhelloFuncRef)
 
-// or the variable
-useFunction(sayhelloFuncRef)
 
-
-// 2. Functions can “capture” variables that exist outside of their local scope.
+// 2. Functions can “capture” or "enclose the scope of" variables that exist outside of their local scope.
 
 let outerScopeVar = 25
 
 func captureOuterScopeVar() {
+  var localVar = "Hey"
   println("OuterScopeVar is: \(outerScopeVar)")
 }
 captureOuterScopeVar()
@@ -51,9 +66,43 @@ let names = ["Chris", "Alex", "Ewa", "Barry", "Daniella"]
 func backwards(s1: String, s2: String) -> Bool {
   return s1 > s2
 }
+
 var reversed = sorted(names, backwards)
+
+struct User {
+  let name:String
+}
+
+let user1 = User(name: "Barry")
+let user2 = User(name: "Dan")
+
+let usersReversed = sorted([user1, user2], { (u1:User, u2:User) -> Bool in
+  return u1.name > u2.name
+})
+
+func sortAlphabetical(s1:String, s2:String) -> Bool {
+  return s1 > s2
+}
+
+//class UserManager {
+//  let users:[User]
+//  
+//  
+//  
+//  func reverseUsers() {
+//    
+//  }
+//}
 
 // Backwards sort using "closure expression"
 reversed = sorted(names, { (s1: String, s2: String) -> Bool in
   return s1 > s2
 })
+
+
+// 1) SWIFT BLOCKS (CLOSURES) SYNTAX
+
+
+//{ (Parameters) -> ReturnType in
+//    ...
+//}
