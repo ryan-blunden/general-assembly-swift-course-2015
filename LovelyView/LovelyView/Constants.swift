@@ -9,6 +9,7 @@
 import Foundation
 
 class Constants {
+  static let segueToUINavigationBar = "segueToUINavigationBar"
   static let segueToAlertViewController = "segueToAlertViewController"
   static let segueToUIWebView = "segueToUIWebView"
   static let segueToScrollView = "segueToScrollView"

@@ -20,6 +20,7 @@ class RecipeDataManager {
   
   func loadRecipes() {
     recipes = [
+      Recipe(title: "UINavigationBar", description: "Understanding its various properties", segue:Constants.segueToUINavigationBar),
       Recipe(title: "UIAlertViewController", description: "How to show alerts", segue:Constants.segueToAlertViewController),
       Recipe(title: "UIScrollView", description: "Providing view scrolling behaviour", segue:Constants.segueToScrollView),
       Recipe(title: "UIWebView", description: "Loading a webpage inside your app", segue:Constants.segueToUIWebView)

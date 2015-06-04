@@ -19,5 +19,11 @@ class ScrollViewController: UIViewController {
     
     let scrollView = self.view as! UIScrollView
     scrollView.contentSize = imageView.frame.size
+    
+    setupNavBar()
+  }
+  
+  private func setupNavBar() {
+    navigationController?.navigationBar.barTintColor = UIColor.redColor()
   }
 }

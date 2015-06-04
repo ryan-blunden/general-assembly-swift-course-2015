@@ -11,6 +11,8 @@
 		315141EA1B2031C100B15DB5 /* WebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 315141E91B2031C100B15DB5 /* WebViewController.swift */; };
 		315141EC1B2032FD00B15DB5 /* ScrollViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 315141EB1B2032FD00B15DB5 /* ScrollViewController.swift */; };
 		315141EE1B2034A400B15DB5 /* UIAlertViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 315141ED1B2034A400B15DB5 /* UIAlertViewController.swift */; };
+		315141F01B204C4A00B15DB5 /* AppViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 315141EF1B204C4900B15DB5 /* AppViewController.swift */; };
+		315141F51B205AF100B15DB5 /* UINavigationBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 315141F41B205AF100B15DB5 /* UINavigationBarViewController.swift */; };
 		31C1D78B1B202094009C55E7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31C1D78A1B202094009C55E7 /* AppDelegate.swift */; };
 		31C1D78D1B202094009C55E7 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31C1D78C1B202094009C55E7 /* ViewController.swift */; };
 		31C1D7901B202094009C55E7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 31C1D78E1B202094009C55E7 /* Main.storyboard */; };
@@ -37,6 +39,8 @@
 		315141E91B2031C100B15DB5 /* WebViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebViewController.swift; sourceTree = "<group>"; };
 		315141EB1B2032FD00B15DB5 /* ScrollViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScrollViewController.swift; sourceTree = "<group>"; };
 		315141ED1B2034A400B15DB5 /* UIAlertViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIAlertViewController.swift; sourceTree = "<group>"; };
+		315141EF1B204C4900B15DB5 /* AppViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppViewController.swift; sourceTree = "<group>"; };
+		315141F41B205AF100B15DB5 /* UINavigationBarViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UINavigationBarViewController.swift; sourceTree = "<group>"; };
 		31C1D7851B202094009C55E7 /* LovelyView.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LovelyView.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		31C1D7891B202094009C55E7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		31C1D78A1B202094009C55E7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -95,12 +99,10 @@
 				31C1D7AD1B202463009C55E7 /* ViewControllers */,
 				31C1D7AC1B20245F009C55E7 /* Models */,
 				31C1D78A1B202094009C55E7 /* AppDelegate.swift */,
-				31C1D78C1B202094009C55E7 /* ViewController.swift */,
 				31C1D78E1B202094009C55E7 /* Main.storyboard */,
 				31C1D7911B202094009C55E7 /* Images.xcassets */,
 				31C1D7931B202094009C55E7 /* LaunchScreen.xib */,
 				31C1D7881B202094009C55E7 /* Supporting Files */,
-				31C1D7AA1B2021F1009C55E7 /* HomeViewController.swift */,
 			);
 			path = LovelyView;
 			sourceTree = "<group>";
@@ -142,9 +144,13 @@
 		31C1D7AD1B202463009C55E7 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				31C1D7AA1B2021F1009C55E7 /* HomeViewController.swift */,
+				31C1D78C1B202094009C55E7 /* ViewController.swift */,
 				315141E91B2031C100B15DB5 /* WebViewController.swift */,
 				315141EB1B2032FD00B15DB5 /* ScrollViewController.swift */,
 				315141ED1B2034A400B15DB5 /* UIAlertViewController.swift */,
+				315141EF1B204C4900B15DB5 /* AppViewController.swift */,
+				315141F41B205AF100B15DB5 /* UINavigationBarViewController.swift */,
 			);
 			name = ViewControllers;
 			sourceTree = "<group>";
@@ -257,12 +263,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				315141F01B204C4A00B15DB5 /* AppViewController.swift in Sources */,
 				31C1D78D1B202094009C55E7 /* ViewController.swift in Sources */,
 				31C1D7B31B2024A5009C55E7 /* RecipeDataManager.swift in Sources */,
 				31C1D78B1B202094009C55E7 /* AppDelegate.swift in Sources */,
 				315141EC1B2032FD00B15DB5 /* ScrollViewController.swift in Sources */,
 				31C1D7AB1B2021F1009C55E7 /* HomeViewController.swift in Sources */,
 				315141EA1B2031C100B15DB5 /* WebViewController.swift in Sources */,
+				315141F51B205AF100B15DB5 /* UINavigationBarViewController.swift in Sources */,
 				315141EE1B2034A400B15DB5 /* UIAlertViewController.swift in Sources */,
 				31C1D7B01B20247D009C55E7 /* Recipe.swift in Sources */,
 				315141E81B202D9400B15DB5 /* Constants.swift in Sources */,

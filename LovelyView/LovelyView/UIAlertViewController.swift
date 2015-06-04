@@ -15,7 +15,12 @@ class UIAlertViewController: UIViewController {
   override func viewDidLoad() {
     super.viewDidLoad()
     
+    setupNavBar()
     displayMessage(message)
+  }
+  
+  private func setupNavBar() {
+    navigationController?.navigationBar.barTintColor = UIColor.blueColor()
   }
   
   func displayMessage(message:String) {

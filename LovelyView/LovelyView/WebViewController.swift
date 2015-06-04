@@ -18,7 +18,12 @@ class WebViewController: UIViewController {
   override func viewDidLoad() {
     super.viewDidLoad()
     
+    setupNavBar()
     loadWebPage()
+  }
+  
+  private func setupNavBar() {
+    navigationController?.navigationBar.barTintColor = UIColor.greenColor()
   }
   
   func loadWebPage() {
