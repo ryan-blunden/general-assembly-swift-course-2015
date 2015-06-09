@@ -28,6 +28,7 @@
                         <segue destination="E2W-Ma-FW2" kind="show" identifier="seguetoAsyncImageViewController" id="vVY-F0-sY2"/>
                         <segue destination="PyC-v6-94x" kind="show" identifier="segueToAboutView" id="B1Y-0l-L7K"/>
                         <segue destination="5xv-vs-mO7" kind="show" identifier="segueToContactView" id="c2Q-sx-UT3"/>
+                        <segue destination="3To-sZ-NB5" kind="show" identifier="segueToGenericWebViewLocal" id="MLK-Nu-qVr"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="TpE-4o-P3w" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -302,6 +303,36 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="prM-Hs-WqB" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2270" y="1415"/>
+        </scene>
+        <!--Web View Controller Local Web View-->
+        <scene sceneID="t0E-L3-ncS">
+            <objects>
+                <viewController id="3To-sZ-NB5" customClass="UIWebViewControllerLocalWebView" customModule="Recipes" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="GKO-aL-QMf"/>
+                        <viewControllerLayoutGuide type="bottom" id="b11-dv-S5S"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="xA3-iS-huk">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="536"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <webView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="8zp-pT-qKO" customClass="UILocalWebView" customModule="Recipes" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="webFile" value="contact"/>
+                                </userDefinedRuntimeAttributes>
+                            </webView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <connections>
+                        <outlet property="webView" destination="8zp-pT-qKO" id="Kio-lN-LGe"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="27r-Cv-NCR" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3052" y="1404"/>
         </scene>
         <!--App View Controller-->
         <scene sceneID="7Ll-hu-Xab">

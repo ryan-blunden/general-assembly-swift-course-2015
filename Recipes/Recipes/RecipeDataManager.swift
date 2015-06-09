@@ -27,8 +27,8 @@ class RecipeDataManager {
       Recipe(title: "UIWebView Local File", description: "Loading a local webpage inside your app", segue:Constants.segueToUIwebViewLocal),
       Recipe(title: "Async Image Loading", description: "Downloading an image in the background", segue:Constants.seguetoAsyncImageViewController),
       Recipe(title: "Generic local web view 1", description: "Using a reusable view controller with a segue", segue:Constants.segueToAboutWebView),
-      Recipe(title: "Generic local web view 2", description: "Reusable web view controller with different values", segue:Constants.segueToContactWebView)
-            
+      Recipe(title: "Generic local web view 2", description: "Reusable web view controller with different values", segue:Constants.segueToContactWebView),
+      Recipe(title: "Generic local web view IBInspectable", description: "Set up a local web view using interface builder", segue:Constants.segueToGenericWebViewLocal)
     ]
   }
   

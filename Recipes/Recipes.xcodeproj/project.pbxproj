@@ -23,6 +23,8 @@
 		31087C7A1B26AB1E005EDE28 /* UIWebViewControllerLocal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31087C791B26AB1E005EDE28 /* UIWebViewControllerLocal.swift */; };
 		31087C801B26BE98005EDE28 /* AsyncImageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31087C7F1B26BE98005EDE28 /* AsyncImageViewController.swift */; };
 		31087C831B26C79C005EDE28 /* Alerts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31087C821B26C79C005EDE28 /* Alerts.swift */; };
+		4484C0341B26F64900E8F5FF /* UIWebViewControllerLocalWebView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4484C0331B26F64900E8F5FF /* UIWebViewControllerLocalWebView.swift */; };
+		4484C0371B26F7D300E8F5FF /* UILocalWebView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4484C0361B26F7D300E8F5FF /* UILocalWebView.swift */; };
 		44899EAE1B26D9D00024AD1F /* web in Resources */ = {isa = PBXBuildFile; fileRef = 44899EAD1B26D9D00024AD1F /* web */; };
 		44899EB01B26DD720024AD1F /* UIWebViewControllerLocalGeneric.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44899EAF1B26DD720024AD1F /* UIWebViewControllerLocalGeneric.swift */; };
 /* End PBXBuildFile section */
@@ -58,6 +60,8 @@
 		31087C791B26AB1E005EDE28 /* UIWebViewControllerLocal.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIWebViewControllerLocal.swift; sourceTree = "<group>"; };
 		31087C7F1B26BE98005EDE28 /* AsyncImageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AsyncImageViewController.swift; sourceTree = "<group>"; };
 		31087C821B26C79C005EDE28 /* Alerts.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Alerts.swift; sourceTree = "<group>"; };
+		4484C0331B26F64900E8F5FF /* UIWebViewControllerLocalWebView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIWebViewControllerLocalWebView.swift; sourceTree = "<group>"; };
+		4484C0361B26F7D300E8F5FF /* UILocalWebView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UILocalWebView.swift; sourceTree = "<group>"; };
 		44899EAD1B26D9D00024AD1F /* web */ = {isa = PBXFileReference; lastKnownFileType = folder; path = web; sourceTree = "<group>"; };
 		44899EAF1B26DD720024AD1F /* UIWebViewControllerLocalGeneric.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIWebViewControllerLocalGeneric.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -101,6 +105,7 @@
 		31087C281B26A23B005EDE28 /* Recipes */ = {
 			isa = PBXGroup;
 			children = (
+				4484C0351B26F64F00E8F5FF /* Views */,
 				31087C811B26C794005EDE28 /* Utilities */,
 				31087C611B26A5C1005EDE28 /* Models */,
 				31087C601B26A593005EDE28 /* Managers */,
@@ -149,6 +154,7 @@
 				31087C521B26A586005EDE28 /* UIAlertViewController.swift */,
 				31087C791B26AB1E005EDE28 /* UIWebViewControllerLocal.swift */,
 				44899EAF1B26DD720024AD1F /* UIWebViewControllerLocalGeneric.swift */,
+				4484C0331B26F64900E8F5FF /* UIWebViewControllerLocalWebView.swift */,
 				31087C7F1B26BE98005EDE28 /* AsyncImageViewController.swift */,
 			);
 			name = ViewControllers;
@@ -194,6 +200,14 @@
 				31087C821B26C79C005EDE28 /* Alerts.swift */,
 			);
 			name = Utilities;
+			sourceTree = "<group>";
+		};
+		4484C0351B26F64F00E8F5FF /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				4484C0361B26F7D300E8F5FF /* UILocalWebView.swift */,
+			);
+			name = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -308,6 +322,8 @@
 				31087C581B26A586005EDE28 /* HomeViewController.swift in Sources */,
 				31087C6B1B26A727005EDE28 /* AppDelegate.swift in Sources */,
 				31087C5A1B26A586005EDE28 /* RecipeDataManager.swift in Sources */,
+				4484C0341B26F64900E8F5FF /* UIWebViewControllerLocalWebView.swift in Sources */,
+				4484C0371B26F7D300E8F5FF /* UILocalWebView.swift in Sources */,
 				31087C831B26C79C005EDE28 /* Alerts.swift in Sources */,
 				31087C801B26BE98005EDE28 /* AsyncImageViewController.swift in Sources */,
 			);
