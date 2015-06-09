@@ -21,9 +21,10 @@
 		31087C6B1B26A727005EDE28 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31087C6A1B26A727005EDE28 /* AppDelegate.swift */; };
 		31087C6E1B26A7A4005EDE28 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 31087C6C1B26A7A4005EDE28 /* Main.storyboard */; };
 		31087C7A1B26AB1E005EDE28 /* UIWebViewControllerLocal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31087C791B26AB1E005EDE28 /* UIWebViewControllerLocal.swift */; };
-		31087C7C1B26B5BF005EDE28 /* web in Resources */ = {isa = PBXBuildFile; fileRef = 31087C7B1B26B5BF005EDE28 /* web */; };
 		31087C801B26BE98005EDE28 /* AsyncImageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31087C7F1B26BE98005EDE28 /* AsyncImageViewController.swift */; };
 		31087C831B26C79C005EDE28 /* Alerts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31087C821B26C79C005EDE28 /* Alerts.swift */; };
+		44899EAE1B26D9D00024AD1F /* web in Resources */ = {isa = PBXBuildFile; fileRef = 44899EAD1B26D9D00024AD1F /* web */; };
+		44899EB01B26DD720024AD1F /* UIWebViewControllerLocalGeneric.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44899EAF1B26DD720024AD1F /* UIWebViewControllerLocalGeneric.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,9 +56,10 @@
 		31087C6A1B26A727005EDE28 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		31087C6D1B26A7A4005EDE28 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		31087C791B26AB1E005EDE28 /* UIWebViewControllerLocal.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIWebViewControllerLocal.swift; sourceTree = "<group>"; };
-		31087C7B1B26B5BF005EDE28 /* web */ = {isa = PBXFileReference; lastKnownFileType = folder; path = web; sourceTree = "<group>"; };
 		31087C7F1B26BE98005EDE28 /* AsyncImageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AsyncImageViewController.swift; sourceTree = "<group>"; };
 		31087C821B26C79C005EDE28 /* Alerts.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Alerts.swift; sourceTree = "<group>"; };
+		44899EAD1B26D9D00024AD1F /* web */ = {isa = PBXFileReference; lastKnownFileType = folder; path = web; sourceTree = "<group>"; };
+		44899EAF1B26DD720024AD1F /* UIWebViewControllerLocalGeneric.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIWebViewControllerLocalGeneric.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -146,6 +148,7 @@
 				31087C4E1B26A586005EDE28 /* HomeViewController.swift */,
 				31087C521B26A586005EDE28 /* UIAlertViewController.swift */,
 				31087C791B26AB1E005EDE28 /* UIWebViewControllerLocal.swift */,
+				44899EAF1B26DD720024AD1F /* UIWebViewControllerLocalGeneric.swift */,
 				31087C7F1B26BE98005EDE28 /* AsyncImageViewController.swift */,
 			);
 			name = ViewControllers;
@@ -179,7 +182,7 @@
 		31087C661B26A637005EDE28 /* Assets */ = {
 			isa = PBXGroup;
 			children = (
-				31087C7B1B26B5BF005EDE28 /* web */,
+				44899EAD1B26D9D00024AD1F /* web */,
 				31087C321B26A23B005EDE28 /* Images.xcassets */,
 			);
 			name = Assets;
@@ -274,7 +277,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				31087C361B26A23B005EDE28 /* LaunchScreen.xib in Resources */,
-				31087C7C1B26B5BF005EDE28 /* web in Resources */,
+				44899EAE1B26D9D00024AD1F /* web in Resources */,
 				31087C331B26A23B005EDE28 /* Images.xcassets in Resources */,
 				31087C6E1B26A7A4005EDE28 /* Main.storyboard in Resources */,
 			);
@@ -298,6 +301,7 @@
 				31087C591B26A586005EDE28 /* Recipe.swift in Sources */,
 				31087C7A1B26AB1E005EDE28 /* UIWebViewControllerLocal.swift in Sources */,
 				31087C5B1B26A586005EDE28 /* ScrollViewController.swift in Sources */,
+				44899EB01B26DD720024AD1F /* UIWebViewControllerLocalGeneric.swift in Sources */,
 				31087C5C1B26A586005EDE28 /* UIAlertViewController.swift in Sources */,
 				31087C561B26A586005EDE28 /* AppViewController.swift in Sources */,
 				31087C5E1B26A586005EDE28 /* WebViewController.swift in Sources */,

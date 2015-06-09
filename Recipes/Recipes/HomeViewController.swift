@@ -42,4 +42,23 @@ class HomeViewController: UITableViewController, UITableViewDataSource, UITableV
     let recipe = recipes[indexPath.row]
     performSegueWithIdentifier(recipe.segue, sender: self)
   }
+    
+  override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+    if let identifier = segue.identifier {
+      switch identifier {
+        case Constants.segueToAboutWebView:
+        if let aboutViewController = segue.destinationViewController as? UIWebViewControllerLocalGeneric {
+            aboutViewController.webFile = "about"
+        }
+        
+        case Constants.segueToContactWebView:
+        if let aboutViewController = segue.destinationViewController as? UIWebViewControllerLocalGeneric {
+            aboutViewController.webFile = "contact"
+        }
+        
+        default:
+         return
+      }
+    }
+  }
 }
