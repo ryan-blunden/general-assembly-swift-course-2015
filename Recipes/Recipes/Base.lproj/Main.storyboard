@@ -2,6 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14D136" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="xvJ-CB-4Db">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--Set title here-->
@@ -229,12 +230,18 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="536"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <webView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="P0f-XP-jm0">
+                            <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="P0f-XP-jm0">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="536"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </webView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="P0f-XP-jm0" firstAttribute="bottom" secondItem="zfI-UY-0In" secondAttribute="top" id="6NI-wh-uca"/>
+                            <constraint firstItem="P0f-XP-jm0" firstAttribute="top" secondItem="ifq-gj-WqA" secondAttribute="bottom" id="74h-za-jRR"/>
+                            <constraint firstAttribute="trailing" secondItem="P0f-XP-jm0" secondAttribute="trailing" id="UTl-EC-UO6"/>
+                            <constraint firstItem="P0f-XP-jm0" firstAttribute="leading" secondItem="QOR-fE-j2h" secondAttribute="leading" id="adv-Q7-frR"/>
+                        </constraints>
                     </view>
                     <connections>
                         <outlet property="webView" destination="P0f-XP-jm0" id="rD9-lf-z0Z"/>
@@ -256,12 +263,18 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="536"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <webView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Nyp-kV-jg3">
+                            <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Nyp-kV-jg3">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="536"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </webView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Nyp-kV-jg3" firstAttribute="leading" secondItem="iXd-kc-sVH" secondAttribute="leading" id="LQJ-D2-ToO"/>
+                            <constraint firstAttribute="trailing" secondItem="Nyp-kV-jg3" secondAttribute="trailing" id="QcG-16-ySA"/>
+                            <constraint firstItem="Nyp-kV-jg3" firstAttribute="top" secondItem="9Zk-kg-QRI" secondAttribute="bottom" id="WtG-6U-TBV"/>
+                            <constraint firstItem="Nyp-kV-jg3" firstAttribute="bottom" secondItem="vl3-9p-NMH" secondAttribute="top" id="mxe-5H-l63"/>
+                        </constraints>
                     </view>
                     <connections>
                         <outlet property="webView" destination="Nyp-kV-jg3" id="hlE-k6-7K5"/>
@@ -316,15 +329,21 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="536"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <webView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="8zp-pT-qKO" customClass="UILocalWebView" customModule="Recipes" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                            <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8zp-pT-qKO" customClass="UILocalWebView" customModule="Recipes" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="536"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="string" keyPath="webFile" value="contact"/>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="webFile" value="about"/>
                                 </userDefinedRuntimeAttributes>
                             </webView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="8zp-pT-qKO" firstAttribute="leading" secondItem="xA3-iS-huk" secondAttribute="leading" id="IMI-my-UFT"/>
+                            <constraint firstAttribute="bottomMargin" secondItem="8zp-pT-qKO" secondAttribute="bottom" id="J4M-ie-Ndu"/>
+                            <constraint firstAttribute="trailing" secondItem="8zp-pT-qKO" secondAttribute="trailing" id="fZ6-HD-mUr"/>
+                            <constraint firstItem="8zp-pT-qKO" firstAttribute="top" secondItem="GKO-aL-QMf" secondAttribute="bottom" id="w1B-IM-gsA"/>
+                        </constraints>
                     </view>
                     <connections>
                         <outlet property="webView" destination="8zp-pT-qKO" id="Kio-lN-LGe"/>
