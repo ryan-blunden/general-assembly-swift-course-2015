@@ -24,6 +24,8 @@
 		31087C7C1B26B5BF005EDE28 /* web in Resources */ = {isa = PBXBuildFile; fileRef = 31087C7B1B26B5BF005EDE28 /* web */; };
 		31087C801B26BE98005EDE28 /* AsyncImageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31087C7F1B26BE98005EDE28 /* AsyncImageViewController.swift */; };
 		31087C831B26C79C005EDE28 /* Alerts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31087C821B26C79C005EDE28 /* Alerts.swift */; };
+		4431C68D1B26EF9500E4EC0D /* UIWebViewControllerLocaGenericl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4431C68C1B26EF9500E4EC0D /* UIWebViewControllerLocaGenericl.swift */; };
+		4431C68F1B26F04600E4EC0D /* UILocalWebView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4431C68E1B26F04600E4EC0D /* UILocalWebView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -58,6 +60,8 @@
 		31087C7B1B26B5BF005EDE28 /* web */ = {isa = PBXFileReference; lastKnownFileType = folder; path = web; sourceTree = "<group>"; };
 		31087C7F1B26BE98005EDE28 /* AsyncImageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AsyncImageViewController.swift; sourceTree = "<group>"; };
 		31087C821B26C79C005EDE28 /* Alerts.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Alerts.swift; sourceTree = "<group>"; };
+		4431C68C1B26EF9500E4EC0D /* UIWebViewControllerLocaGenericl.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIWebViewControllerLocaGenericl.swift; sourceTree = "<group>"; };
+		4431C68E1B26F04600E4EC0D /* UILocalWebView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UILocalWebView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,6 +103,7 @@
 		31087C281B26A23B005EDE28 /* Recipes */ = {
 			isa = PBXGroup;
 			children = (
+				4431C6871B26ED3A00E4EC0D /* Views */,
 				31087C811B26C794005EDE28 /* Utilities */,
 				31087C611B26A5C1005EDE28 /* Models */,
 				31087C601B26A593005EDE28 /* Managers */,
@@ -146,6 +151,7 @@
 				31087C4E1B26A586005EDE28 /* HomeViewController.swift */,
 				31087C521B26A586005EDE28 /* UIAlertViewController.swift */,
 				31087C791B26AB1E005EDE28 /* UIWebViewControllerLocal.swift */,
+				4431C68C1B26EF9500E4EC0D /* UIWebViewControllerLocaGenericl.swift */,
 				31087C7F1B26BE98005EDE28 /* AsyncImageViewController.swift */,
 			);
 			name = ViewControllers;
@@ -191,6 +197,14 @@
 				31087C821B26C79C005EDE28 /* Alerts.swift */,
 			);
 			name = Utilities;
+			sourceTree = "<group>";
+		};
+		4431C6871B26ED3A00E4EC0D /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				4431C68E1B26F04600E4EC0D /* UILocalWebView.swift */,
+			);
+			name = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -297,6 +311,7 @@
 				31087C571B26A586005EDE28 /* Constants.swift in Sources */,
 				31087C591B26A586005EDE28 /* Recipe.swift in Sources */,
 				31087C7A1B26AB1E005EDE28 /* UIWebViewControllerLocal.swift in Sources */,
+				4431C68D1B26EF9500E4EC0D /* UIWebViewControllerLocaGenericl.swift in Sources */,
 				31087C5B1B26A586005EDE28 /* ScrollViewController.swift in Sources */,
 				31087C5C1B26A586005EDE28 /* UIAlertViewController.swift in Sources */,
 				31087C561B26A586005EDE28 /* AppViewController.swift in Sources */,
@@ -304,6 +319,7 @@
 				31087C581B26A586005EDE28 /* HomeViewController.swift in Sources */,
 				31087C6B1B26A727005EDE28 /* AppDelegate.swift in Sources */,
 				31087C5A1B26A586005EDE28 /* RecipeDataManager.swift in Sources */,
+				4431C68F1B26F04600E4EC0D /* UILocalWebView.swift in Sources */,
 				31087C831B26C79C005EDE28 /* Alerts.swift in Sources */,
 				31087C801B26BE98005EDE28 /* AsyncImageViewController.swift in Sources */,
 			);
