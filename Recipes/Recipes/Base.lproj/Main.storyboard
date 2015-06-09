@@ -26,6 +26,7 @@
                         <segue destination="PGv-7i-SF8" kind="show" identifier="segueToUINavigationBar" id="5cF-Y8-xy9"/>
                         <segue destination="Mgx-dh-NiC" kind="show" identifier="segueToUIwebViewLocal" id="3e2-ez-73B"/>
                         <segue destination="E2W-Ma-FW2" kind="show" identifier="seguetoAsyncImageViewController" id="vVY-F0-sY2"/>
+                        <segue destination="bT5-Qo-nKe" kind="show" identifier="segueToGenericWebViewLocal" id="HlT-nM-pot"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="TpE-4o-P3w" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -213,6 +214,38 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xhQ-vS-2TP" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1484" y="1415"/>
+        </scene>
+        <!--Web View Controller Local Generic-->
+        <scene sceneID="plG-qc-mgG">
+            <objects>
+                <viewController id="bT5-Qo-nKe" customClass="UIWebViewControllerLocalGeneric" customModule="Recipes" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="yrJ-M7-VDB"/>
+                        <viewControllerLayoutGuide type="bottom" id="rtq-fz-RcH"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="LXC-vY-Ikv">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="536"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <webView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="3R2-94-Jf5" customClass="UILocalWebView" customModule="Recipes" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="webFile" value="about"/>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="webDir" value="web"/>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="fileExtension" value="html"/>
+                                </userDefinedRuntimeAttributes>
+                            </webView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <connections>
+                        <outlet property="webView" destination="3R2-94-Jf5" id="67S-l6-b2N"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="khS-Dl-deI" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1472" y="2142"/>
         </scene>
         <!--UIScrollView-->
         <scene sceneID="H3N-9P-D6W">
