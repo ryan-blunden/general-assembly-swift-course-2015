@@ -8,7 +8,7 @@
 
 import UIKit
 
-class UIWebViewControllerLocalGeneric: UIViewController {
+class UIWebViewControllerLocalWebView: UIViewController {
   
   @IBOutlet weak var webView: UILocalWebView!
   
