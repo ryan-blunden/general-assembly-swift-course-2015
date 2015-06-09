@@ -15,4 +15,6 @@ class Constants {
   static let segueToScrollView = "segueToScrollView"
   static let segueToUIwebViewLocal = "segueToUIwebViewLocal"
   static let seguetoAsyncImageViewController = "seguetoAsyncImageViewController"
+  static let segueToAboutWebView = "segueToAboutView"
+  static let segueToContactWebView = "segueToContactView"
 }
