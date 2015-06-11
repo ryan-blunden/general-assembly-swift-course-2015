@@ -30,7 +30,8 @@
                         <segue destination="PyC-v6-94x" kind="show" identifier="segueToAboutView" id="B1Y-0l-L7K"/>
                         <segue destination="5xv-vs-mO7" kind="show" identifier="segueToContactView" id="c2Q-sx-UT3"/>
                         <segue destination="3To-sZ-NB5" kind="show" identifier="segueToGenericWebViewLocal" id="MLK-Nu-qVr"/>
-                        <segue destination="NVl-KJ-shb" kind="show" identifier="segueToSwiftyJSON" id="tFo-ip-6EV"/>
+                        <segue destination="2Je-Uc-ovV" kind="show" identifier="segueToNotificationViewController" id="msZ-TI-rnw"/>
+                        <segue destination="dr6-m5-Zng" kind="show" identifier="segueToSwiftyJSON" id="lNQ-qR-MGx"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="TpE-4o-P3w" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -285,52 +286,113 @@
             </objects>
             <point key="canvasLocation" x="2390" y="2233"/>
         </scene>
-        <!--SwiftyJSON-->
-        <scene sceneID="hDX-Xe-KpH">
+        <!--Notification View Controller-->
+        <scene sceneID="P8c-zq-HjI">
             <objects>
-                <viewController title="SwiftyJSON" id="NVl-KJ-shb" customClass="SwiftyJSONViewController" customModule="Recipes" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="2Je-Uc-ovV" customClass="NotificationViewController" customModule="Recipes" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="jSx-4L-VRr"/>
-                        <viewControllerLayoutGuide type="bottom" id="WGA-7O-b9f"/>
+                        <viewControllerLayoutGuide type="top" id="eSX-5Y-cWE"/>
+                        <viewControllerLayoutGuide type="bottom" id="jPo-dC-SaL"/>
                     </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="X43-h8-5KQ">
+                    <view key="view" contentMode="scaleToFill" id="mkC-ua-ncc">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="536"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TxK-EB-Dbr">
-                                <rect key="frame" x="279" y="16" width="42" height="21"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" relation="lessThanOrEqual" constant="300" id="JO1-9Q-3dc"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pZb-ln-9IY">
-                                <rect key="frame" x="258" y="73" width="85" height="30"/>
-                                <state key="normal" title="Go to article">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="51t-gA-fdO">
+                                <rect key="frame" x="219" y="199" width="162" height="30"/>
+                                <state key="normal" title="Send a notification now">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <action selector="onButtonTapped:" destination="NVl-KJ-shb" eventType="touchUpInside" id="HMq-K0-Dat"/>
+                                    <action selector="sendNotification:" destination="2Je-Uc-ovV" eventType="touchUpInside" id="HfJ-SQ-lfV"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="D5N-Iv-cJk">
+                                <rect key="frame" x="193" y="106" width="215" height="30"/>
+                                <state key="normal" title="Ask for notification permissions">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="checkForNotificationPermissions:" destination="2Je-Uc-ovV" eventType="touchUpInside" id="v85-ps-tlb"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vgK-ES-OGj">
+                                <rect key="frame" x="186" y="297" width="228" height="30"/>
+                                <state key="normal" title="Send a notification into the future">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="scheduleNotification:" destination="2Je-Uc-ovV" eventType="touchUpInside" id="P6M-TM-yhS"/>
                                 </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="pZb-ln-9IY" firstAttribute="top" secondItem="TxK-EB-Dbr" secondAttribute="bottom" constant="36" id="mOI-TA-Lg9"/>
-                            <constraint firstAttribute="centerX" secondItem="TxK-EB-Dbr" secondAttribute="centerX" id="n4I-CR-mwo"/>
-                            <constraint firstAttribute="centerX" secondItem="pZb-ln-9IY" secondAttribute="centerX" id="sw3-PJ-wpy"/>
-                            <constraint firstItem="TxK-EB-Dbr" firstAttribute="top" secondItem="jSx-4L-VRr" secondAttribute="bottom" constant="16" id="uNu-lj-1ho"/>
+                            <constraint firstItem="D5N-Iv-cJk" firstAttribute="top" secondItem="eSX-5Y-cWE" secondAttribute="bottom" constant="106" id="2SO-Rj-yw1"/>
+                            <constraint firstItem="vgK-ES-OGj" firstAttribute="top" secondItem="51t-gA-fdO" secondAttribute="bottom" constant="68" id="FY6-Nw-BYR"/>
+                            <constraint firstItem="D5N-Iv-cJk" firstAttribute="centerX" secondItem="51t-gA-fdO" secondAttribute="centerX" id="ISG-rp-egA"/>
+                            <constraint firstAttribute="centerX" secondItem="vgK-ES-OGj" secondAttribute="centerX" id="MTA-g6-dtt"/>
+                            <constraint firstItem="D5N-Iv-cJk" firstAttribute="centerX" secondItem="mkC-ua-ncc" secondAttribute="centerX" id="b1j-ad-jST"/>
+                            <constraint firstItem="51t-gA-fdO" firstAttribute="top" secondItem="D5N-Iv-cJk" secondAttribute="bottom" constant="63" id="btA-Xb-NTs"/>
+                            <constraint firstAttribute="centerY" secondItem="vgK-ES-OGj" secondAttribute="centerY" constant="-44" id="k5M-yi-zz1"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="k5M-yi-zz1"/>
+                            </mask>
+                        </variation>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="jGe-5A-H0W" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3132" y="2232"/>
+        </scene>
+        <!--SwiftyJSON View Controller-->
+        <scene sceneID="C4E-Xn-bsE">
+            <objects>
+                <viewController id="dr6-m5-Zng" customClass="SwiftyJSONViewController" customModule="Recipes" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="UDT-Zt-W83"/>
+                        <viewControllerLayoutGuide type="bottom" id="2hf-fs-tBR"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="DYq-8r-fX8">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="536"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5zw-dl-On9">
+                                <rect key="frame" x="279" y="34" width="42" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="lessThanOrEqual" constant="298" id="vd8-1I-7oH"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JGc-pH-kW1">
+                                <rect key="frame" x="228" y="98" width="144" height="30"/>
+                                <state key="normal" title="Open article in Safari">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="onButtonTapped:" destination="dr6-m5-Zng" eventType="touchUpInside" id="kVI-hj-LAn"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="5zw-dl-On9" firstAttribute="top" secondItem="UDT-Zt-W83" secondAttribute="bottom" constant="34" id="d2m-qA-HnE"/>
+                            <constraint firstItem="JGc-pH-kW1" firstAttribute="top" secondItem="5zw-dl-On9" secondAttribute="bottom" constant="43" id="mXE-Op-NFp"/>
+                            <constraint firstAttribute="centerX" secondItem="5zw-dl-On9" secondAttribute="centerX" id="sdS-pq-DYL"/>
+                            <constraint firstAttribute="centerX" secondItem="JGc-pH-kW1" secondAttribute="centerX" id="uyL-ii-O6h"/>
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="newsArticleTitle" destination="TxK-EB-Dbr" id="Eln-H5-kow"/>
+                        <outlet property="newsArticleTitle" destination="5zw-dl-On9" id="Fw2-zJ-8Bq"/>
                     </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dge-Vl-lyg" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ahb-uv-3GK" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3110" y="2233"/>
+            <point key="canvasLocation" x="3910" y="2240"/>
         </scene>
         <!--UIScrollView-->
         <scene sceneID="H3N-9P-D6W">
@@ -365,10 +427,10 @@
             </objects>
             <point key="canvasLocation" x="2270" y="1415"/>
         </scene>
-        <!--Generic WebView Local-->
+        <!--Web View Controller Local Web View-->
         <scene sceneID="t0E-L3-ncS">
             <objects>
-                <viewController title="Generic WebView Local" id="3To-sZ-NB5" customClass="UIWebViewControllerLocalWebView" customModule="Recipes" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="3To-sZ-NB5" customClass="UIWebViewControllerLocalWebView" customModule="Recipes" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="GKO-aL-QMf"/>
                         <viewControllerLayoutGuide type="bottom" id="b11-dv-S5S"/>
