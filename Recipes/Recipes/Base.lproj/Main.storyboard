@@ -30,6 +30,7 @@
                         <segue destination="PyC-v6-94x" kind="show" identifier="segueToAboutView" id="B1Y-0l-L7K"/>
                         <segue destination="5xv-vs-mO7" kind="show" identifier="segueToContactView" id="c2Q-sx-UT3"/>
                         <segue destination="3To-sZ-NB5" kind="show" identifier="segueToGenericWebViewLocal" id="MLK-Nu-qVr"/>
+                        <segue destination="NVl-KJ-shb" kind="show" identifier="segueToSwiftyJSON" id="tFo-ip-6EV"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="TpE-4o-P3w" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -284,6 +285,53 @@
             </objects>
             <point key="canvasLocation" x="2390" y="2233"/>
         </scene>
+        <!--SwiftyJSON-->
+        <scene sceneID="hDX-Xe-KpH">
+            <objects>
+                <viewController title="SwiftyJSON" id="NVl-KJ-shb" customClass="SwiftyJSONViewController" customModule="Recipes" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="jSx-4L-VRr"/>
+                        <viewControllerLayoutGuide type="bottom" id="WGA-7O-b9f"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="X43-h8-5KQ">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="536"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TxK-EB-Dbr">
+                                <rect key="frame" x="279" y="16" width="42" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="lessThanOrEqual" constant="300" id="JO1-9Q-3dc"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pZb-ln-9IY">
+                                <rect key="frame" x="258" y="73" width="85" height="30"/>
+                                <state key="normal" title="Go to article">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="onButtonTapped:" destination="NVl-KJ-shb" eventType="touchUpInside" id="HMq-K0-Dat"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="pZb-ln-9IY" firstAttribute="top" secondItem="TxK-EB-Dbr" secondAttribute="bottom" constant="36" id="mOI-TA-Lg9"/>
+                            <constraint firstAttribute="centerX" secondItem="TxK-EB-Dbr" secondAttribute="centerX" id="n4I-CR-mwo"/>
+                            <constraint firstAttribute="centerX" secondItem="pZb-ln-9IY" secondAttribute="centerX" id="sw3-PJ-wpy"/>
+                            <constraint firstItem="TxK-EB-Dbr" firstAttribute="top" secondItem="jSx-4L-VRr" secondAttribute="bottom" constant="16" id="uNu-lj-1ho"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="newsArticleTitle" destination="TxK-EB-Dbr" id="Eln-H5-kow"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dge-Vl-lyg" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3110" y="2233"/>
+        </scene>
         <!--UIScrollView-->
         <scene sceneID="H3N-9P-D6W">
             <objects>
@@ -317,10 +365,10 @@
             </objects>
             <point key="canvasLocation" x="2270" y="1415"/>
         </scene>
-        <!--Web View Controller Local Web View-->
+        <!--Generic WebView Local-->
         <scene sceneID="t0E-L3-ncS">
             <objects>
-                <viewController id="3To-sZ-NB5" customClass="UIWebViewControllerLocalWebView" customModule="Recipes" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Generic WebView Local" id="3To-sZ-NB5" customClass="UIWebViewControllerLocalWebView" customModule="Recipes" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="GKO-aL-QMf"/>
                         <viewControllerLayoutGuide type="bottom" id="b11-dv-S5S"/>

@@ -28,7 +28,8 @@ class RecipeDataManager {
       Recipe(title: "Async Image Loading", description: "Downloading an image in the background", segue:Constants.seguetoAsyncImageViewController),
       Recipe(title: "Generic local web view 1", description: "Using a reusable view controller with a segue", segue:Constants.segueToAboutWebView),
       Recipe(title: "Generic local web view 2", description: "Reusable web view controller with different values", segue:Constants.segueToContactWebView),
-      Recipe(title: "Generic local web view IBInspectable", description: "Set up a local web view using interface builder", segue:Constants.segueToGenericWebViewLocal)
+      Recipe(title: "Generic local web view IBInspectable", description: "Set up a local web view using interface builder", segue:Constants.segueToGenericWebViewLocal),
+      Recipe(title: "Swifty JSON", description: "Use Swifty JSON to download a news feed", segue:Constants.segueToSwiftyJSON)
     ]
   }
   

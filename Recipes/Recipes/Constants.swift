@@ -18,4 +18,5 @@ class Constants {
   static let segueToAboutWebView = "segueToAboutView"
   static let segueToContactWebView = "segueToContactView"
   static let segueToGenericWebViewLocal = "segueToGenericWebViewLocal"
+  static let segueToSwiftyJSON = "segueToSwiftyJSON"
 }
