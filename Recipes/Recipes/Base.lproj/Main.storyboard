@@ -30,6 +30,7 @@
                         <segue destination="PyC-v6-94x" kind="show" identifier="segueToAboutView" id="B1Y-0l-L7K"/>
                         <segue destination="5xv-vs-mO7" kind="show" identifier="segueToContactView" id="c2Q-sx-UT3"/>
                         <segue destination="3To-sZ-NB5" kind="show" identifier="segueToGenericWebViewLocal" id="MLK-Nu-qVr"/>
+                        <segue destination="2Je-Uc-ovV" kind="show" identifier="segueToNotificationViewController" id="msZ-TI-rnw"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="TpE-4o-P3w" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -283,6 +284,67 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="g6f-PM-XcO" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2390" y="2233"/>
+        </scene>
+        <!--Notification View Controller-->
+        <scene sceneID="P8c-zq-HjI">
+            <objects>
+                <viewController id="2Je-Uc-ovV" customClass="NotificationViewController" customModule="Recipes" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="eSX-5Y-cWE"/>
+                        <viewControllerLayoutGuide type="bottom" id="jPo-dC-SaL"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="mkC-ua-ncc">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="536"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="51t-gA-fdO">
+                                <rect key="frame" x="219" y="199" width="162" height="30"/>
+                                <state key="normal" title="Send a notification now">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="sendNotification:" destination="2Je-Uc-ovV" eventType="touchUpInside" id="HfJ-SQ-lfV"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="D5N-Iv-cJk">
+                                <rect key="frame" x="193" y="106" width="215" height="30"/>
+                                <state key="normal" title="Ask for notification permissions">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="checkForNotificationPermissions:" destination="2Je-Uc-ovV" eventType="touchUpInside" id="v85-ps-tlb"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vgK-ES-OGj">
+                                <rect key="frame" x="186" y="297" width="228" height="30"/>
+                                <state key="normal" title="Send a notification into the future">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="scheduleNotification:" destination="2Je-Uc-ovV" eventType="touchUpInside" id="P6M-TM-yhS"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="D5N-Iv-cJk" firstAttribute="top" secondItem="eSX-5Y-cWE" secondAttribute="bottom" constant="106" id="2SO-Rj-yw1"/>
+                            <constraint firstItem="vgK-ES-OGj" firstAttribute="top" secondItem="51t-gA-fdO" secondAttribute="bottom" constant="68" id="FY6-Nw-BYR"/>
+                            <constraint firstItem="D5N-Iv-cJk" firstAttribute="centerX" secondItem="51t-gA-fdO" secondAttribute="centerX" id="ISG-rp-egA"/>
+                            <constraint firstAttribute="centerX" secondItem="vgK-ES-OGj" secondAttribute="centerX" id="MTA-g6-dtt"/>
+                            <constraint firstItem="D5N-Iv-cJk" firstAttribute="centerX" secondItem="mkC-ua-ncc" secondAttribute="centerX" id="b1j-ad-jST"/>
+                            <constraint firstItem="51t-gA-fdO" firstAttribute="top" secondItem="D5N-Iv-cJk" secondAttribute="bottom" constant="63" id="btA-Xb-NTs"/>
+                            <constraint firstAttribute="centerY" secondItem="vgK-ES-OGj" secondAttribute="centerY" constant="-44" id="k5M-yi-zz1"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="k5M-yi-zz1"/>
+                            </mask>
+                        </variation>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="jGe-5A-H0W" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3132" y="2232"/>
         </scene>
         <!--UIScrollView-->
         <scene sceneID="H3N-9P-D6W">

@@ -27,6 +27,7 @@
 		4484C0371B26F7D300E8F5FF /* UILocalWebView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4484C0361B26F7D300E8F5FF /* UILocalWebView.swift */; };
 		44899EAE1B26D9D00024AD1F /* web in Resources */ = {isa = PBXBuildFile; fileRef = 44899EAD1B26D9D00024AD1F /* web */; };
 		44899EB01B26DD720024AD1F /* UIWebViewControllerLocalGeneric.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44899EAF1B26DD720024AD1F /* UIWebViewControllerLocalGeneric.swift */; };
+		4498CA7C1B2980CC00A319EC /* NotificationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4498CA7B1B2980CC00A319EC /* NotificationViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -64,6 +65,7 @@
 		4484C0361B26F7D300E8F5FF /* UILocalWebView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UILocalWebView.swift; sourceTree = "<group>"; };
 		44899EAD1B26D9D00024AD1F /* web */ = {isa = PBXFileReference; lastKnownFileType = folder; path = web; sourceTree = "<group>"; };
 		44899EAF1B26DD720024AD1F /* UIWebViewControllerLocalGeneric.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIWebViewControllerLocalGeneric.swift; sourceTree = "<group>"; };
+		4498CA7B1B2980CC00A319EC /* NotificationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotificationViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -156,6 +158,7 @@
 				44899EAF1B26DD720024AD1F /* UIWebViewControllerLocalGeneric.swift */,
 				4484C0331B26F64900E8F5FF /* UIWebViewControllerLocalWebView.swift */,
 				31087C7F1B26BE98005EDE28 /* AsyncImageViewController.swift */,
+				4498CA7B1B2980CC00A319EC /* NotificationViewController.swift */,
 			);
 			name = ViewControllers;
 			sourceTree = "<group>";
@@ -313,6 +316,7 @@
 			files = (
 				31087C571B26A586005EDE28 /* Constants.swift in Sources */,
 				31087C591B26A586005EDE28 /* Recipe.swift in Sources */,
+				4498CA7C1B2980CC00A319EC /* NotificationViewController.swift in Sources */,
 				31087C7A1B26AB1E005EDE28 /* UIWebViewControllerLocal.swift in Sources */,
 				31087C5B1B26A586005EDE28 /* ScrollViewController.swift in Sources */,
 				44899EB01B26DD720024AD1F /* UIWebViewControllerLocalGeneric.swift in Sources */,
