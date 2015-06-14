@@ -20,4 +20,5 @@ class Constants {
   static let segueToGenericWebViewLocal = "segueToGenericWebViewLocal"
   static let segueToSwiftyJSON = "segueToSwiftyJSON"
   static let segueToNotificationViewController = "segueToNotificationViewController"
+  static let segueToColourise = "segueToColourse"
 }

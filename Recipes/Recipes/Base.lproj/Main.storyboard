@@ -32,6 +32,7 @@
                         <segue destination="3To-sZ-NB5" kind="show" identifier="segueToGenericWebViewLocal" id="MLK-Nu-qVr"/>
                         <segue destination="2Je-Uc-ovV" kind="show" identifier="segueToNotificationViewController" id="msZ-TI-rnw"/>
                         <segue destination="dr6-m5-Zng" kind="show" identifier="segueToSwiftyJSON" id="lNQ-qR-MGx"/>
+                        <segue destination="p2i-Xx-uhc" kind="show" identifier="segueToColourse" id="2R0-qs-32v"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="TpE-4o-P3w" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -347,6 +348,93 @@
             </objects>
             <point key="canvasLocation" x="3132" y="2232"/>
         </scene>
+        <!--Colourise Controller-->
+        <scene sceneID="9rS-zj-ROJ">
+            <objects>
+                <viewController id="p2i-Xx-uhc" customClass="ColouriseController" customModule="Recipes" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Xur-Ns-NSa"/>
+                        <viewControllerLayoutGuide type="bottom" id="q6k-Oa-PPy"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="UDB-Jm-bck">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="536"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="1E0-7M-1ox">
+                                <rect key="frame" x="24" y="237" width="552" height="31"/>
+                                <connections>
+                                    <action selector="colourChanged:" destination="p2i-Xx-uhc" eventType="valueChanged" id="QVy-2Z-jFI"/>
+                                </connections>
+                            </slider>
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="SgR-4g-7Ja">
+                                <rect key="frame" x="24" y="294" width="552" height="31"/>
+                                <connections>
+                                    <action selector="colourChanged:" destination="p2i-Xx-uhc" eventType="valueChanged" id="p8b-UD-YlF"/>
+                                </connections>
+                            </slider>
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="QLV-j0-Joy">
+                                <rect key="frame" x="24" y="348" width="552" height="31"/>
+                                <connections>
+                                    <action selector="colourChanged:" destination="p2i-Xx-uhc" eventType="valueChanged" id="sTM-oS-HPp"/>
+                                </connections>
+                            </slider>
+                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="Cat" translatesAutoresizingMaskIntoConstraints="NO" id="UW2-bz-ejs">
+                                <rect key="frame" x="215" y="25" width="171" height="171"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Red" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kDq-FO-a8k">
+                                <rect key="frame" x="26" y="221" width="32" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Green" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gVW-MJ-7Yy">
+                                <rect key="frame" x="26" y="275" width="47" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Blue" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uBq-2L-fOo">
+                                <rect key="frame" x="26" y="337" width="35" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="QLV-j0-Joy" firstAttribute="leading" secondItem="uBq-2L-fOo" secondAttribute="leading" id="09w-0f-uip"/>
+                            <constraint firstItem="QLV-j0-Joy" firstAttribute="width" secondItem="SgR-4g-7Ja" secondAttribute="width" id="3xP-py-o3t"/>
+                            <constraint firstItem="QLV-j0-Joy" firstAttribute="centerX" secondItem="SgR-4g-7Ja" secondAttribute="centerX" id="5ip-Yx-6B3"/>
+                            <constraint firstItem="SgR-4g-7Ja" firstAttribute="top" secondItem="gVW-MJ-7Yy" secondAttribute="bottom" constant="-2" id="9b6-Wn-oTk"/>
+                            <constraint firstItem="SgR-4g-7Ja" firstAttribute="width" secondItem="1E0-7M-1ox" secondAttribute="width" id="DqS-Ae-YDj"/>
+                            <constraint firstItem="QLV-j0-Joy" firstAttribute="top" secondItem="SgR-4g-7Ja" secondAttribute="bottom" constant="24" id="Hdx-NJ-E5A"/>
+                            <constraint firstItem="UW2-bz-ejs" firstAttribute="top" secondItem="Xur-Ns-NSa" secondAttribute="bottom" constant="25" id="JRW-I9-leS"/>
+                            <constraint firstItem="kDq-FO-a8k" firstAttribute="bottom" secondItem="1E0-7M-1ox" secondAttribute="bottom" constant="-25" id="TdX-Sp-DjD"/>
+                            <constraint firstItem="SgR-4g-7Ja" firstAttribute="top" secondItem="1E0-7M-1ox" secondAttribute="bottom" constant="27" id="aKT-SU-pbz"/>
+                            <constraint firstItem="1E0-7M-1ox" firstAttribute="leading" secondItem="UDB-Jm-bck" secondAttribute="leadingMargin" constant="10" id="aop-4w-khz"/>
+                            <constraint firstItem="1E0-7M-1ox" firstAttribute="top" secondItem="UW2-bz-ejs" secondAttribute="bottom" constant="41" id="bd6-Km-KGf"/>
+                            <constraint firstAttribute="centerX" secondItem="UW2-bz-ejs" secondAttribute="centerX" constant="-0.5" id="fBO-FZ-WvS"/>
+                            <constraint firstItem="QLV-j0-Joy" firstAttribute="top" secondItem="uBq-2L-fOo" secondAttribute="bottom" constant="-10" id="i8f-iY-90L"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="1E0-7M-1ox" secondAttribute="trailing" constant="10" id="iv5-Mb-R9k"/>
+                            <constraint firstItem="kDq-FO-a8k" firstAttribute="leading" secondItem="1E0-7M-1ox" secondAttribute="leading" id="l0f-mX-ewC"/>
+                            <constraint firstItem="SgR-4g-7Ja" firstAttribute="width" secondItem="1E0-7M-1ox" secondAttribute="width" id="lGi-hQ-qoF"/>
+                            <constraint firstAttribute="centerX" secondItem="1E0-7M-1ox" secondAttribute="centerX" id="nd5-bt-zp2"/>
+                            <constraint firstItem="SgR-4g-7Ja" firstAttribute="leading" secondItem="gVW-MJ-7Yy" secondAttribute="leading" id="rDe-x9-ija"/>
+                            <constraint firstItem="SgR-4g-7Ja" firstAttribute="centerX" secondItem="1E0-7M-1ox" secondAttribute="centerX" id="tSt-CO-ajk"/>
+                            <constraint firstItem="QLV-j0-Joy" firstAttribute="width" secondItem="SgR-4g-7Ja" secondAttribute="width" id="tvm-KS-Y8t"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="blue" destination="QLV-j0-Joy" id="2j7-hn-Zel"/>
+                        <outlet property="cat" destination="UW2-bz-ejs" id="bLm-c8-2Zv"/>
+                        <outlet property="green" destination="SgR-4g-7Ja" id="0ag-1G-iw3"/>
+                        <outlet property="red" destination="1E0-7M-1ox" id="nyc-Qt-gZT"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="EDu-27-t6h" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-78" y="2998"/>
+        </scene>
         <!--SwiftyJSON View Controller-->
         <scene sceneID="C4E-Xn-bsE">
             <objects>
@@ -483,6 +571,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="Cat" width="171" height="171"/>
         <image name="View" width="1632" height="1224"/>
     </resources>
 </document>
